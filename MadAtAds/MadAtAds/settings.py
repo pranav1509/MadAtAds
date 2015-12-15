@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Templates Path
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
 # Application definition
 
@@ -37,7 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'registration',
 ]
+
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    TEMPLATE_PATH,
+)
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -51,6 +61,8 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'MadAtAds.urls'
+
+
 
 TEMPLATES = [
     {
