@@ -1,0 +1,6 @@
+# my.cnf
+[client]
+database = madatads
+user = 'django_user'
+password = pranav
+default-character-set = utf8
